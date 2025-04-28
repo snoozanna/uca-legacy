@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+
+:root {
+  --font-headings: "Contrail One", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --padding: 2rem;
+  --padding-mob: 3rem;
+  --icon-size: 3rem;
+  --pink: #d66280;
+  --purple: #2d3261;
+  --blackish: #0a0a0a;
+  --offwhite: #f6eee3;
+  --orange: rgb(255, 85, 0);
+  --lightorange: orange;
+  --red: rgb(146, 22, 22);
+  --greencorrect: #59bd5b;
+  --browny: #6d3443;
+  --greeny: #cde96f;
+  --main-bg-color: black;
+  --color-text:var( --offwhite);
+}
+
+/* STRUCTURE */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 2rem;
+  font-size: 1.6rem;
+  background-color: var(--main-bg-color);
+  /* background-image: url(../assets/img/logobutton.png), url(../assets/img/purplebackground.jpg); */
+ /* background-repeat: no-repeat, no-repeat;
+  background-position: 250% center, center;
+  background-size: 90% auto, cover; */
+  background-image:  url(../assets/img/purplebackground.jpg);
+  background-repeat:  no-repeat;
+  background-position:  center;
+   background-size: cover;
+ 
+  overflow: scroll;
+  background-attachment: fixed;
+  padding-top: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  text-align: left;
+
+}
+
+body.paper{
+  background-image:  url(../assets/img/paperbackground.jpg);
+  color: black
+}
+
+body.green{
+  background-image:  url(../assets/img/greenbackground.jpg);
+  color: black
+}
+
+
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  padding: var(--padding-mob);
+ .logo-wrapper{
+  max-width: 50%;
+ }
+}
+
+main{
+  margin-block-end: 15rem;
+  padding: var(--padding-mob);
+}
+
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--browny);
+  color: var(--offwhite);
+  padding: 1rem var(--padding-mob);
+
+}
+
+.button-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 120vw;
+  height: 100vh;
+  background-image: url(../assets/img/logobutton.png);
+  background-repeat: no-repeat;
+  background-position: 200px 50%;
+  background-size: contain;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+/* TYPOGRAPHY */
+
+p, ul, li{
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--font-headings);
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-block-end: 2rem;
+
+}
+
+h2{
+  font-size: 3rem;
+}
+
+ul {
+  list-style: inherit;
+}
+ul > li{
+  margin-inline-start: 3rem;
+}
+
+li{
+  margin-block-end: 1rem;
+}
+
+span.accent{
+  font-weight: 800;
+  font-family: var(--font-headings);
+  font-size: 2.4rem;
+}
+
+a > span.accent{
+  font-size: inherit
+}
+
+a:hover {
+  color: var(--lightorange);
+}
+
+a.pink:hover > span.accent{
+  color: var(--pink);
+}
+
+
+/* BUTTON  */
+
+
+button,
+.inline-btn-wrapper > a {
+  background-color: var(--pink);
+  color: var(--offwhite);
+  border: var(--offwhite) 2px solid;
+  border-radius: 3px;
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: 800;
+  box-shadow: var(--blackish) 4px 4px;
+}
+
+button:hover {
+  background-color: var(--lightorange);
+  border: var(--offwhite) 2px solid;
+  color: var(--blackish);
+}
+
+button:hover > a {
+  color: var(--blackish);
+}
+
+button:focus,
+.inline-btn-wrapper > a {
+  transform: translate(2px, 2px);
+  box-shadow: var(--accent-color-shadow) 1px 1px;
+}
+
+a:active {
+  background-color: var(--color-pink);
+}
+
+a:hover {
+  color: var(--lightorange);
+}
+
+.start-section{
+
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-3deg);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.start-section > p > button, 
+.start-section> button{
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+/* FOOTER MENU  */
+
+
+footer > nav {
+  display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+
+.menu-item.logo > a{
+  font-size: 2rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-item{
+  text-align: left;
+  font-weight: 600;
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  max-width: 50%;
+  display: flex;
+    flex-direction: column;
+}
+
+.logo-wrapper{
+  max-width: 11rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* HOME  */
+header > .page-title{
+  width: 100%;
+}
+
+/* EPISODE PAGE  */
+main.episode-page{
+  display: flex;
+  flex-direction: column;
+  gap:2rem
+}
+
+.page-title{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 7rem;
+}
+
+footer.episode-page > nav{
+    align-items: center;
+}
+
+
+
+/* CONTENTS  */
+
+
+/* VIDEOS  */
+.video-container{
+  display: flex;
+  align-items: center;
+  gap:2rem;
+  flex-direction: column;
+}
+
+.video-container > .row-btn{
+  display: none;
+}
+
+.video-container > iframe{
+  min-width: 100%;
+    width: 80vw;
+}
+
+.video-container > .video-btns{
+  width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header.video > .page-title{
+margin-block-start: 0
+
+}
+
+header.video > .page-title > h1{
+  font-size: 7rem;
+}
+header.video > .page-title > h2{
+  font-size: 5rem;
+}
+
+.menu-item.episodes.videos > span > img{
+  max-width: 4rem;
+}
+
+.menu-item.episodes.videos > menu.item{
+  text-align: left;
+    font-weight: 600;
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* IPAD */
+@media screen and (min-width: 450px) {
+main{
+  padding-top: 0;
+}
+main > .main-container.text{
+max-width: 1080px;
+}
+
+header{
+    align-items: center;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.page-title{
+flex-direction: row;
+}
+
+
+.page-title > h1{
+
+width: 50%;
+margin-block-end: 0;
+
+}
+
+.page-title > h2{
+  font-size: 6rem;
+  margin-inline-start: 4rem;
+  }
+
+  .logo-wrapper{
+    max-width: 20rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+footer{
+  background-color: var(--browny);
+  color: var(--offwhite);
+  padding: 1rem var(--padding-mob);
+}
+
+.menu-item.episodes{
+  display: flex;
+  flex-direction: column;
+}
+
+footer > nav {
+  align-items: end;
+}
+
+
+ /* episodes  */
+
+
+
+main.episode-page > .inline-img-wrapper{
+  max-width: 50%;
+
+}
+
+header > .page-title{
+  display: flex;
+    align-items: start;
+
+}
+
+header.episode-page > .page-title {
+  justify-content: start;
+}
+
+/* videos */
+.menu-item.episodes.videos > menu.item{
+
+font-size: 2rem;
+max-width: 35%;
+}
+
+/* HOME  */
+.page-title.welcome > h1{
+  width: 100%;
+  
+  }
+}
+
+
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 850px) {
+  .page-title > h1{
+    font-size: 9rem;
+
+    
+    }
+  header > .page-title{
+    width: 800px;
+    margin-block-start: 3rem;
+  }
+  .intro-text{
+    max-width: 800px;
+    width: 800px;
+  
+  }
+
+   /* episodes  */
+
+ main.episode-page{
+  flex-direction: row;
+}
+
+main.episode-page > .inline-img-wrapper{
+  max-width: 30%;
+
+}
+header > .page-title{
+
+  display: flex;
+  align-items: end;
+  margin-block-start: 3rem;
+}
+
+
+}
